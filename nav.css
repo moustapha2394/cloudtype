@@ -1,0 +1,43 @@
+nav{
+	width: 240px;
+	height: 100%;
+	background-color: #008b8b;
+	position: fixed;
+	margin: 0;
+	padding: 0;
+	top: 0;
+}
+nav ul{
+	list-style: none;
+	margin-top: 85px;
+	padding: 0;
+	overflow: auto;
+}
+nav li a{
+	display: block;
+	font-size: 1.5em;
+	text-decoration: none;
+}
+nav li a:hover{
+	background-color: #416e85;
+	color: #f90013;
+	text-decoration-line: underline;
+	cursor: pointer;
+}
+nav li{
+	text-align: center;
+	line-height: 2;
+}
+nav ul li ul{
+	display: none;
+	font-size: 16px;
+	padding: 0;
+	margin: 0;
+	
+}
+nav ul li:hover ul{
+	display: block;
+}
+nav ul li ul li a{
+	color: #475151;
+}
