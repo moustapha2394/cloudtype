@@ -13,7 +13,6 @@ main{
 	position: relative;
 	margin-left: 250px;
 	margin-right: 10px;
-	top:50px;
 	width: 45% auto;
 	display: inline-block;
 }
@@ -22,4 +21,23 @@ h1{
 }
 table th ,table td{
 	text-align: center;
+}
+table{
+	margin-left: 100px;
+	width: 100%;
+	border-collapse: collapse;
+	border: 2px solid black;
+}
+table thead th{
+	height: 40px;
+	line-height: 40px;
+	border: 2px solid black;
+}
+table tbody{
+	height: 50px;
+}
+td{
+	border: 2px solid black;
+	height: 40px;
+	line-height: 40px;
 }

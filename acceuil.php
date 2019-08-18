@@ -17,10 +17,8 @@ while (false !==($fichier2=readdir($dossier2))) {
 	}
 }
 if (count($list1)<count($list2)) {
-	$inf=count($list1);
 	$supp=count($list2);
-}else{$inf=count($list2);
-	$supp=count($list1);
+}else{$supp=count($list1);
 }
 ?>
 <html>
@@ -38,9 +36,16 @@ if (count($list1)<count($list2)) {
 	<h1>Infos general</h1>
 	<table>
 		<thead>
-		<tr>
-			<th>cloud</th>
+		<tr><th>#</th>
+			<th colspan="3">cloud</th>
 			<th>fonction</th>
+		</tr>
+		<tr>
+			<th>-</th>
+			<th>nom</th>
+			<th>type</th>
+			<th>taille</th>
+			<th>-</th>
 		</tr>
 		</thead>
 		<tbody>
@@ -52,8 +57,11 @@ if (count($list1)<count($list2)) {
              	if (!isset($list2[$i])) {
              		$list2[$i]="-";
              	}
-             	echo '<tr><td>'.$list1[$i].'</td>
-             	<td>'.$list2[$i].'</td></tr>';
+             	echo '<tr>
+             	<td>'.($i+1).'</td>
+             	<td>'.$list1[$i].'</td><td>oiu</td><td>oiu</td>
+             	<td>'.$list2[$i].'</td>
+             	</tr>';
              }
 				
 
