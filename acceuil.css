@@ -13,7 +13,7 @@ main{
 	position: relative;
 	margin-left: 250px;
 	margin-right: 10px;
-	width: 45% auto;
+	width: auto;
 	display: inline-block;
 }
 h1{
@@ -25,6 +25,7 @@ table th ,table td{
 table{
 	margin-left: 100px;
 	width: 757px;
+	overflow: scroll;
 	border-collapse: collapse;
 	border: 2px solid black;
 }

@@ -11,6 +11,7 @@
 			<li><a href="">Console</a></li>
 			<li><a href="">Fonctions</a>
 				<ul>
+					<li><a>nouvelles fonctions</a></li>
 					<li><a href="">fichier1</a></li>
 					<li><a href="">fichier2</a></li>
 					<li><a href="">fichier3</a></li>

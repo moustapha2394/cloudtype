@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <?php
-$adresse1="./cloud/"; //Adresse du dossier sans oublier le / à la fin.
+include 'functions.php';
+$adresse1="./cloud/"; 
 $adresse2="./functions/";
 $dossier1=Opendir($adresse1);
 $dossier2=Opendir($adresse2);
@@ -9,19 +10,25 @@ $list2 = array();
 $size1= array();
 while (false !==($fichier1=readdir($dossier1))) {
 	if ($fichier1!=="." && $fichier1!=="..") {
-		$list1[]=$fichier1;
-		$size1[]=filesize($adresse1.$fichier1);
+		if (is_dir($adresse1.$fichier1)) {
+			$list1[]=$fichier1;
+			$size1[]=taillerepertoire($adresse1.$fichier1);
+		}
 	}
 }
 while (false !==($fichier2=readdir($dossier2))) {
-	if ($fichier2!=="." && $fichier2!=="..") {
+		if ($fichier2!=="." && $fichier2!=="..") {
 		$list2[]=$fichier2;
-	}
+}
+
 }
 if (count($list1)<count($list2)) {
 	$supp=count($list2);
 }else{$supp=count($list1);
 }
+$list1=array_reverse($list1);
+$list2=array_reverse($list2);
+$size1=array_reverse($size1);
 function GetSizeName($octet)
 {
     // Array contenant les differents unités 
@@ -76,14 +83,14 @@ function GetSizeName($octet)
 		<tr>
 			<th>-</th>
 			<th>nom</th>
-			<th>type</th>
+			<th>date de modification</th>
 			<th>taille</th>
 			<th>-</th>
 		</tr>
 		</thead>
 		<tbody>
 			<?php 
-             for ($i=0; $i <$supp ; $i++) { 
+             for ($i=0; $i<$supp ; $i++) { 
              	if (!isset($list1[$i])) {
              		$list1[$i]="-";
              	}
