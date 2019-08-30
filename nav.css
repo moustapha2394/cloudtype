@@ -1,43 +1,77 @@
+h1{
+	font-size: 60px;
+	text-decoration: underline;	
+}
+
+th{
+	font-size: 30px;
+}
+
+a:visited{
+	text-decoration: none;
+	color: #dde1e3;
+}
+a:ative{
+	text-decoration: none;
+	color: #dde1e3;
+}
+
 nav{
-	width: 240px;
+	width: 155px;
 	height: 100%;
-	background-color: #008b8b;
+	background-color: #57606f;
 	position: fixed;
-	margin: 0;
-	padding: 0;
-	top: 0;
 }
 nav ul{
 	list-style: none;
-	margin-top: 85px;
 	padding: 0;
-	overflow: auto;
+	overflow: hidden;
+	font-size: 20px;
 }
 nav li a{
 	display: block;
-	font-size: 1.5em;
 	text-decoration: none;
 }
+
 nav li a:hover{
-	background-color: #416e85;
-	color: #f90013;
-	text-decoration-line: underline;
+	font-stretch: bold;
+	background-color: #ffffff;
+	color: #000000;
+	text-decoration-line: none;
 	cursor: pointer;
+	font-weight: bold; 
 }
+
 nav li{
-	text-align: center;
+	text-align: initial;
 	line-height: 2;
 }
+
 nav ul li ul{
 	display: none;
-	font-size: 16px;
+	font-size: 15px;
 	padding: 0;
 	margin: 0;
-	
 }
+
 nav ul li:hover ul{
 	display: block;
 }
-nav ul li ul li a{
-	color: #475151;
+
+nav ul li {
+	display: block;
+	border-bottom: 1px solid #000000;
+	padding: 12px 13px;
+	overflow: block;	
+	background: #57606f;
+}
+
+nav ul li ul li{
+	background: #57606f;
+	border-right: 1px solid #000000;
+	border-left: 1px solid #000000;
+}
+
+.list{
+	
 }

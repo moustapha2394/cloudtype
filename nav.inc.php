@@ -1,22 +1,21 @@
 <nav>
 		<ul>
-			<li><a href="#">Acceuil</a></li>
-			<li><a href="#">Systeme de cloud</a>
+			<li><a class="menu" href="#">Home</a></li>
+			<li><a class="menu" href="#">Cloud System</a>
 				<ul>
-					<li><a href="">fichier1</a></li>
-					<li><a href="">fichier2</a></li>
-					<li><a href="">fichier3</a></li>
+					<li><a class="list" href="">Folder1</a></li>
+					<li><a class="list" href="">Folder2</a></li>
+					<li><a class="list" href="">Folder3</a></li>
 				</ul>
 			</li>
-			<li><a href="">Console</a></li>
-			<li><a href="">Fonctions</a>
+			<li><a class="menu" href="">Console</a></li>
+			<li><a class="menu" href="">Functions</a>
 				<ul>
-					<li><a>nouvelles fonctions</a></li>
-					<li><a href="">fichier1</a></li>
-					<li><a href="">fichier2</a></li>
-					<li><a href="">fichier3</a></li>
+					<li><a class="list" href="">Folder1</a></li>
+					<li><a class="list" href="">Folder2</a></li>
+					<li><a class="list" href="">Folder3</a></li>
 				</ul>
 			</li>
-			<li id="f"><a href="">Administration</a></li>
+			<li id="f"><a class="menu" href="">Administration</a></li>
 		</ul>
 </nav>

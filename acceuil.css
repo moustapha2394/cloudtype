@@ -1,44 +1,59 @@
 html{
-  font-family: sans-serif;
+  font-family: 'Lato', sans-serif;;
   margin: 0 ;
   padding: 0;
-  background-color: #dde1e3;
+  background-color: #f0f0f0;
 
 }
+
 body{
 	margin: 0;
 	width: 100%;
+}
+
+main h1{
+	font-size: 25px;
+}
+
+main th{
+	font-size: 20px;
 }
 main{
 	position: relative;
 	margin-left: 250px;
 	margin-right: 10px;
-	width: auto;
+	width: 45% auto;
 	display: inline-block;
+	font-size: 18px;
 }
+
 h1{
-	text-align: center;
+	margin-left: 100px;
 }
+
 table th ,table td{
 	text-align: center;
 }
+
 table{
 	margin-left: 100px;
-	width: 757px;
-	overflow: scroll;
+	width: 100%;
 	border-collapse: collapse;
-	border: 2px solid black;
+	border: 3px solid black;
 }
+
 table thead th{
 	height: 40px;
 	line-height: 40px;
-	border: 2px solid black;
+	border: 3px solid black;
 }
+
 table tbody{
 	height: 50px;
 }
+
 td{
-	border: 2px solid black;
+	border: 3px solid black;
 	height: 40px;
 	line-height: 40px;
 }

@@ -33,9 +33,9 @@ if (isset($_POST['submit'])) {
 		<input type="password" name="psswd" id="psswd">
 	</div>
 	<div class="button">
-		<button type="submit" name="submit">Se connecter</button>
+		<button type="submit" name="submit">Login</button>
 	</div>
 </form>
-<a href="acceuil.php">acceuil</a>
+<a href="acceuil.php">Home</a>
 </body>
 </html>

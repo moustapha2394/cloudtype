@@ -64,6 +64,7 @@ function GetSizeName($octet)
 <html>
 <head>
 	<title></title>
+    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="acceuil.css">
 	<link rel="stylesheet" type="text/css" href="nav.css">
 	<link rel="stylesheet" type="text/css" href="header.css">
@@ -73,18 +74,18 @@ function GetSizeName($octet)
 <?php include('nav.inc.php'); ?>
 
 <main>
-	<h1>Infos general</h1>
+	<h1>General Info:</h1>
 	<table>
 		<thead>
 		<tr><th>#</th>
-			<th colspan="3">cloud</th>
-			<th>fonction</th>
+			<th colspan="3">Cloud</th>
+			<th>Function</th>
 		</tr>
 		<tr>
 			<th>-</th>
-			<th>nom</th>
-			<th>date de modification</th>
-			<th>taille</th>
+			<th>Name</th>
+			<th>Modification date</th>
+			<th>Size</th>
 			<th>-</th>
 		</tr>
 		</thead>
