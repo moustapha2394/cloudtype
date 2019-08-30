@@ -22,7 +22,7 @@ main{
 	position: relative;
 	margin-left: 250px;
 	margin-right: 10px;
-	width: 45% auto;
+	width: auto;
 	display: inline-block;
 	font-size: 18px;
 }

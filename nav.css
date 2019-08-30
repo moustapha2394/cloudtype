@@ -7,13 +7,13 @@ th{
 	font-size: 30px;
 }
 
-a:visited{
+nav a:visited{
 	text-decoration: none;
-	color: #dde1e3;
+	color: #f0f0f0;;
 }
-a:ative{
+nav a:active{
 	text-decoration: none;
-	color: #dde1e3;
+	color: #f0f0f0;
 }
 
 nav{
@@ -31,11 +31,12 @@ nav ul{
 nav li a{
 	display: block;
 	text-decoration: none;
+	color: #f0f0f0;
 }
 
 nav li a:hover{
 	font-stretch: bold;
-	background-color: #ffffff;
+	background-color: #f0f0f0;
 	color: #000000;
 	text-decoration-line: none;
 	cursor: pointer;
@@ -67,8 +68,4 @@ nav ul li ul li{
 	background: #57606f;
 	border-right: 1px solid #000000;
 	border-left: 1px solid #000000;
-}
-
-.list{
-	
 }
