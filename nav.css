@@ -32,6 +32,7 @@ nav li a{
 	display: block;
 	text-decoration: none;
 	color: #f0f0f0;
+	padding-left: 10px;
 }
 
 nav li a:hover{
@@ -58,10 +59,8 @@ nav ul li:hover ul{
 }
 
 nav ul li {
-	display: block;
+	display: block;	
 	border-bottom: 1px solid #000000;
-	overflow: block;	
-	background: #57606f;
 }
 
 nav ul li ul li{

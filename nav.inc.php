@@ -11,11 +11,12 @@
 			<li><a class="menu" href="">Console</a></li>
 			<li><a class="menu" href="">Functions</a>
 				<ul>
+					<li><a class="newfunc" href="#">New Function</a></li>
 					<li><a class="list" href="">Folder1</a></li>
 					<li><a class="list" href="">Folder2</a></li>
 					<li><a class="list" href="">Folder3</a></li>
 				</ul>
 			</li>
-			<li id="f"><a class="menu" href="">Administration</a></li>
+			<li><a class="menu" href="">Administration</a></li>
 		</ul>
 </nav>

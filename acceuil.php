@@ -109,7 +109,16 @@ function GetSizeName($octet)
 			?>
 		</tbody>
 	</table>
+	<dialog>
+	<div class="boite" style="display:none">
+		<form>
+			<label for="name" >Nom de la fonction:</label>
+			<input type="text" name="name">
+			<input type="submit" name="submit">
+		</form>
+	</div>
+			</dialog>
 </main>
-
 </body>
+<script src="function.js" async></script>
 </html>
