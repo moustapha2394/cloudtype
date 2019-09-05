@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <?php
 include 'functions.php';
+try {
+	$bdd=new PDO('mysql:host=localhost;dbname=cloudtype;charset=utf8','root','');
+} catch (Exception $e) {
+	die('Erreur :'.$e->getMessage());
+}
 $adresse1="./cloud/"; 
 $adresse2="./functions/";
 $dossier1=Opendir($adresse1);
@@ -70,6 +75,7 @@ function GetSizeName($octet)
 	<link rel="stylesheet" type="text/css" href="header.css">
 </head>
 <body>
+<div class="container">
 <?php include('header.inc.php'); ?>
 <?php include('nav.inc.php'); ?>
 
@@ -109,15 +115,17 @@ function GetSizeName($octet)
 			?>
 		</tbody>
 	</table>
-	<dialog>
-	<div class="boite" style="display:none">
+	
+			</div>
+	<div class="boite" >
+		<button type="button" class="fermer">X</button>
 		<form>
-			<label for="name" >Nom de la fonction:</label>
-			<input type="text" name="name">
-			<input type="submit" name="submit">
+			<label for="name">Function's name :</label>
+			<input type="text" name="name" ></br>
+			<textarea name="code"></textarea>
+			<input type="submit" name="submit" value="save">
 		</form>
 	</div>
-			</dialog>
 </main>
 </body>
 <script src="function.js" async></script>
