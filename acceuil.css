@@ -69,17 +69,32 @@ td{
 	border: 3px solid black;
 	display:none;
 	width: 750px;
-	height: 500px;
+	height: 530px;
 	filter: blur(0);
 }
 .fermer{
 	background-color: #57606f;
 	font-size: 2em;
 	position: relative;
-	top:15px;
+	top:-55px;
 	left:700px;
+	display: inline-block;
 	border-style: none
 }
 .boite form{
 	margin: 30px;
+	position: absolute;
+	top: 65px;
+}
+textarea{
+	overflow: scroll;
+	resize: none;
+	width: 690px;
+	height: 350px;
+}
+.savebut{
+	position: relative;
+	left:650px;
+	margin-top: 15px;
+	margin-bottom: 15px;
 }

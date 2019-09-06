@@ -118,12 +118,13 @@ function GetSizeName($octet)
 	
 			</div>
 	<div class="boite" >
+		<h2 style="text-align:center;">New function</h2>
 		<button type="button" class="fermer">X</button>
 		<form>
 			<label for="name">Function's name :</label>
 			<input type="text" name="name" ></br>
-			<textarea name="code"></textarea>
-			<input type="submit" name="submit" value="save">
+			<textarea name="code" class="codepart"></textarea>
+			<input type="submit" class="savebut" name="submit" value="save">
 		</form>
 	</div>
 </main>
