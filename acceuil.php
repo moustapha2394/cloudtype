@@ -75,10 +75,9 @@ function GetSizeName($octet)
 	<link rel="stylesheet" type="text/css" href="header.css">
 </head>
 <body>
-<div class="container">
 <?php include('header.inc.php'); ?>
 <?php include('nav.inc.php'); ?>
-
+<div class="container">
 <main>
 	<h1>General Info:</h1>
 	<div class="table">
