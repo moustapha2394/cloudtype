@@ -81,6 +81,7 @@ function GetSizeName($octet)
 
 <main>
 	<h1>General Info:</h1>
+	<div class="table">
 	<table>
 		<thead>
 		<tr><th>#</th>
@@ -110,12 +111,10 @@ function GetSizeName($octet)
              	<td>'.$list2[$i].'</td>
              	</tr>';
              }
-				
-
 			?>
 		</tbody>
 	</table>
-	
+			</div>
 			</div>
 	<div class="boite" >
 		<h2 style="text-align:center;">New function</h2>

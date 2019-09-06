@@ -81,6 +81,9 @@ td{
 	display: inline-block;
 	border-style: none
 }
+.fermer:hover{
+	cursor: pointer;
+}
 .boite form{
 	margin: 30px;
 	position: absolute;
