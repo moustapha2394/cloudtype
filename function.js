@@ -5,7 +5,7 @@ var codepart = document.querySelector('.boiteF .codepart');
 var table = document.querySelector('.table');
 var container = document.querySelectorAll(".container, nav, header");
 var gris = document.querySelector('#wrapper');
-	function etat(l) {
+	function etat(l=0) {
 		if (l==1) {
 		boite.style.display='block';
 		table.style.display='none';
@@ -25,10 +25,13 @@ var gris = document.querySelector('#wrapper');
 	}
 	function cc(){
 		etat(1);
+		
 	}
+	
 	function close(){
 		codepart.value="";
 		etat(0);
 	}
 	closebtn.addEventListener('click',close);
 	btnNewF.addEventListener('click',cc);
+	gris.addEventListener('click',etat);
