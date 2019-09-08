@@ -1,15 +1,24 @@
 <?php 
+session_start();
+try {
+	$bdd=new PDO('mysql:host=localhost;dbname=cloudtype;charset=utf8','root','');
+} catch (Exception $e) {
+	die('Erreur :'.$e->getMessage());
+}
 if (isset($_POST['user']) && isset($_POST['psswd'])) {
-
-$user = $_POST['user'];
-$pwd = $_POST['psswd'];
+$req=$bdd->prepare('SELECT pseudo ,password FROM user WHERE pseudo = ? AND password = ?');
+$user = htmlspecialchars($_POST['user']) ;
+$pwd = htmlspecialchars($_POST['psswd']) ;
 if (isset($_POST['submit'])) {
 	if (!empty($user) && !empty($pwd)) {
-		if ($user=="toto" && $pwd=="1234") {
+		$req->execute(array($user,$pwd));
+		$nb=$req->rowCount();
+		echo '<h1>'.$nb.'</h1>';
+		if ($nb>0) {
+			$_SESSION['user']=$user;
 			header('location:acceuil.php');
 		}else{
-			echo "faux";
-			
+			echo '<h1>'.$nb.'</h1>';
 		}
 	}
 }

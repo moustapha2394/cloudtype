@@ -1,11 +1,8 @@
-<!DOCTYPE html>
+
 <?php
+session_start();
+if (isset($_SESSION['user'])) {
 include 'functions.php';
-try {
-	$bdd=new PDO('mysql:host=localhost;dbname=cloudtype;charset=utf8','root','');
-} catch (Exception $e) {
-	die('Erreur :'.$e->getMessage());
-}
 $adresse1="./cloud/"; 
 $adresse2="./functions/";
 $dossier1=Opendir($adresse1);
@@ -16,8 +13,11 @@ $size1= array();
 while (false !==($fichier1=readdir($dossier1))) {
 	if ($fichier1!=="." && $fichier1!=="..") {
 		if (is_dir($adresse1.$fichier1)) {
-			$list1[]=$fichier1;
+			$project=explode('§§A§§',$fichier1);
+			if($project[0]==$_SESSION['user']){
+			$list1[]=$project[1];
 			$size1[]=taillerepertoire($adresse1.$fichier1);
+			}
 		}
 	}
 }
@@ -65,9 +65,12 @@ function GetSizeName($octet)
         }
     }
 }
+}else{header('location:index.php');}
 ?>
+<!DOCTYPE html>
 <html>
 <head>
+	<meta content="text/html;charset=UTF-8">
 	<title></title>
     <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="acceuil.css">
@@ -75,8 +78,11 @@ function GetSizeName($octet)
 	<link rel="stylesheet" type="text/css" href="header.css">
 </head>
 <body>
+<div id="page">
+
 <?php include('header.inc.php'); ?>
-<?php include('nav.inc.php'); ?>
+<?php include('nav.inc.php');?>
+<div id="wrapper">&nbsp;</div>
 <div class="container">
 <main>
 	<h1>General Info:</h1>
@@ -102,24 +108,38 @@ function GetSizeName($octet)
              		$list1[$i]="-";
              	}
              	if (!isset($list2[$i])) {
-             		$list2[$i]="-";
-             	}
+					$list2[$i]="-";
+				}
+				if (!isset($size1[$i])) {
+					$size1[$i]="-";
+				}
              	echo '<tr>
              	<td>'.($i+1).'</td>
              	<td>'.$list1[$i].'</td><td>oiu</td><td>'.GetSizeName($size1[$i]).'</td>
              	<td>'.$list2[$i].'</td>
              	</tr>';
-             }
+			}
 			?>
 		</tbody>
 	</table>
 			</div>
 			</div>
-	<div class="boite" >
+		</div>
+			<div class="boiteF" >
 		<h2 style="text-align:center;">New function</h2>
 		<button type="button" class="fermer">X</button>
 		<form>
 			<label for="name">Function's name :</label>
+			<input type="text" name="name" ></br>
+			<textarea name="code" class="codepart" ></textarea>
+			<input type="submit" class="savebut" name="submit" value="save">
+		</form>
+	</div>
+	<div class="boiteP" >
+		<h2 style="text-align:center;">New Project</h2>
+		<button type="button" class="fermer">X</button>
+		<form>
+			<label for="name">Project's name :</label>
 			<input type="text" name="name" ></br>
 			<textarea name="code" class="codepart"></textarea>
 			<input type="submit" class="savebut" name="submit" value="save">

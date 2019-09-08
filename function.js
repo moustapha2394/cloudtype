@@ -1,22 +1,34 @@
 var btnNewF = document.querySelector('.newfunc');
-var boite = document.querySelector('.boite');
-var closebtn = document.querySelector('.boite .fermer');
-var codepart = document.querySelector('.boite .codepart');
+var boite = document.querySelector('.boiteF');
+var closebtn = document.querySelector('.boiteF .fermer');
+var codepart = document.querySelector('.boiteF .codepart');
 var table = document.querySelector('.table');
-var container = document.querySelector('.container' ,'nav' ,'header');
-var nav = document.querySelector('nav');
-	function cc(){
+var container = document.querySelectorAll(".container, nav, header");
+var gris = document.querySelector('#wrapper');
+	function etat(l) {
+		if (l==1) {
 		boite.style.display='block';
 		table.style.display='none';
-		container.style.filter='blur(2px)';
-		nav.style.filter='blur(2px)';
+		for (let i = 0; i < container.length; i++) {	
+			container[i].style.filter='blur(2px)';
+		}
+		gris.style.display='block';
+		}
+		else {
+			boite.style.display='none';
+			table.style.display='contents';
+			for (let i = 0; i < container.length; i++) {	
+				container[i].style.filter='blur(0)';
+			}
+			gris.style.display='none';
+		}
+	}
+	function cc(){
+		etat(1);
 	}
 	function close(){
-		boite.style.display='none';
 		codepart.value="";
-		table.style.display='contents';
-		container.style.filter='blur(0)';
-		nav.style.filter='blur(0)';
+		etat(0);
 	}
 	closebtn.addEventListener('click',close);
 	btnNewF.addEventListener('click',cc);
