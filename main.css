@@ -1,0 +1,51 @@
+html{
+    font-family: 'Lato', sans-serif;;
+    margin: 0 ;
+    padding: 0;
+    background-color: #f0f0f0;
+  }
+  
+  body{
+      margin: 0;
+      width: 100%;
+      height: 100%;
+  }
+  main h1{
+      font-size: 25px;
+  }
+  
+  main th{
+      font-size: 20px;
+  }
+  main{
+      position: relative;
+      margin-right: 10px;
+      width: auto;
+      display: inline-block;
+      font-size: 18px;
+      top: 50px;
+      margin-left: 250px;
+  }
+  .container{
+	position: relative;
+	margin-left: 100px;
+	margin-right: 10px;
+	width: auto;
+	display: inline-block;
+}
+#page{
+	position: relative;
+}
+#wrapper{
+background:silver;
+position:absolute;
+top:0;
+height:1000px;
+width:100%;
+opacity: 0.8;
+display: none;
+}
+  h1{
+      margin-left: 100px;
+      text-align: center;
+  }

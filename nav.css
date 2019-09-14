@@ -53,6 +53,7 @@ nav li{
 nav ul li ul{
 	display: none;
 	font-size: 15px;
+	border-left:3px solid #000000;
 }
 
 nav ul li:hover ul{
@@ -68,17 +69,20 @@ nav ul li ul li{
 	background: #57606f;
 	border-left: 1px solid #000000;
 }
-#page{
-	position: relative;
+.new{
+	background-color: #57606f;
+	border-style: none;
+	text-decoration: none;
+	color: #f0f0f0;
+	display: block;
+	padding-left: 10px;
+	line-height: 2;
+	width:100%;
 }
-#wrapper{
-	background:silver;
-position:absolute;
-top:0;
-height:1000px;
-width:100%;
-opacity: 0.8;
--ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
-filter:alpha(opacity=80);
-display: none;
+.new:hover{
+	background-color: #f0f0f0;
+	color: #000000;
+	text-decoration-line: none;
+	cursor: pointer;
+	font-weight: bold;
 }

@@ -1,8 +1,13 @@
-
 <?php
 session_start();
-if (isset($_SESSION['user'])) {
-include 'functions.php';
+if (isset($_SESSION['ID'])) {
+if ($_SESSION['ID']==$_GET['ID']) {
+try {
+		$bdd=new PDO('mysql:host=localhost;dbname=cloudtype;charset=utf8','root','');
+	} catch (Exception $e) {
+		die('Erreur :'.$e->getMessage());
+	}
+include 'config/functions.php';
 $adresse1="./cloud/"; 
 $adresse2="./functions/";
 $dossier1=Opendir($adresse1);
@@ -36,7 +41,6 @@ $list2=array_reverse($list2);
 $size1=array_reverse($size1);
 function GetSizeName($octet)
 {
-    // Array contenant les differents unités 
     $unite = array('octet','ko','mo','go');
     
     if ($octet < 1000) // octet
@@ -63,9 +67,10 @@ function GetSizeName($octet)
                 return $go.$unite[3];    
             }
         }
-    }
+	}
 }
-}else{header('location:index.php');}
+}else{header('Location:deconnexion.php?error=401');}
+}else{header('Location:deconnexion.php');}
 ?>
 <!DOCTYPE html>
 <html>
@@ -74,20 +79,20 @@ function GetSizeName($octet)
 	<title></title>
     <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="acceuil.css">
+	<link rel="stylesheet" type="text/css" href="main.css">
 	<link rel="stylesheet" type="text/css" href="nav.css">
 	<link rel="stylesheet" type="text/css" href="header.css">
 </head>
 <body>
 <div id="page">
 
-<?php include('header.inc.php'); ?>
-<?php include('nav.inc.php');?>
+<?php include('header.inc.php');
+include('nav.inc.php');?>
 <div id="wrapper">&nbsp;</div>
 <div class="container">
 <main>
 	<h1>General Info:</h1>
-	<div class="table">
-	<table>
+	<table class="table">
 		<thead>
 		<tr><th>#</th>
 			<th colspan="3">Cloud</th>
@@ -123,29 +128,8 @@ function GetSizeName($octet)
 		</tbody>
 	</table>
 			</div>
-			</div>
 		</div>
-			<div class="boiteF" >
-		<h2 style="text-align:center;">New function</h2>
-		<button type="button" class="fermer">X</button>
-		<form>
-			<label for="name">Function's name :</label>
-			<input type="text" name="name" ></br>
-			<textarea name="code" class="codepart" ></textarea>
-			<input type="submit" class="savebut" name="submit" value="save">
-		</form>
-	</div>
-	<div class="boiteP" >
-		<h2 style="text-align:center;">New Project</h2>
-		<button type="button" class="fermer">X</button>
-		<form>
-			<label for="name">Project's name :</label>
-			<input type="text" name="name" ></br>
-			<textarea name="code" class="codepart"></textarea>
-			<input type="submit" class="savebut" name="submit" value="save">
-		</form>
-	</div>
+			<?php include('butnew.php');?>
 </main>
 </body>
-<script src="function.js" async></script>
 </html>

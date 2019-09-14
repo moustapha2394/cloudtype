@@ -1,0 +1,17 @@
+table th{
+    color: white;
+    background-color: #2f3542;
+    padding: 12px;
+    
+}
+table{
+    border-collapse: collapse;
+    text-align: center;
+}
+#listfunct tr:hover{
+    background-color: #b1b9c6;
+    cursor: pointer;
+}
+table tr:nth-child(even){
+    background-color:#57606f;
+}
